@@ -1,0 +1,17 @@
+#!/bin/bash
+
+GESTALT_CACHE_PATH=/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches
+GESTALT_TARGET_KEY=f+PE44W6AO2UENJk3p2s5A
+
+CC_PATH=/System/Library/ControlCenter/Bundles/LowPowerModule.bundle
+
+cd $GESTALT_CACHE_PATH
+echo "In $GESTALT_CACHE_PATH"
+plutil -key CacheExtra -key $GESTALT_TARGET_KEY -type int -value 1 com.apple.MobileGestalt.plist || true
+plutil -convert binary1 com.apple.MobileGestalt.plist || true
+
+cd $CC_PATH
+echo "In $CC_PATH"
+plutil -key UIRequiredDeviceCapabilities -type json -value "[\"arm64\"]" Info.plist || true
+plutil -key UIDeviceFamily -type json -value "[1,2]" Info.plist || true
+plutil -convert binary1 Info.plist || true
