@@ -6,7 +6,7 @@ Description: Enable Low Power Mode natively on unsupported devices.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), plutil, firmware (>= 11.0), firmware (<< 15.0)
+Depends: mobilesubstrate (>= 0.9.5000), com.bingner.plutil, firmware (>= 11.0), firmware (<< 15.0)
 Conflicts: com.icraze.lpmpad
 Depiction: https://poomsmart.github.io/repo/depictions/lpmenabler.html
 SileoDepiction: https://poomsmart.github.io/repo/sileodepictions/lpmenabler.json
