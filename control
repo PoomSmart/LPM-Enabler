@@ -2,7 +2,7 @@ Package: com.ps.lpmenabler
 Name: LPM Enabler
 Version: 1.0.0
 Architecture: iphoneos-arm
-Description: Enable Low Power Mode natively on unsupported devices.
+Description: Enables Low Power Mode natively on unsupported iPad and iPod devices.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Tweaks
